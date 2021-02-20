@@ -1,5 +1,5 @@
 # About
-Repository created to make a proof of concep about NodeJS, ExpressJS, Mocha y SOLID.
+Repository created to make a proof of concept about NodeJS, ExpressJS, Mocha y SOLID.
 
 The main idea is solvin a little puzzle about 3 and 5 divisions.
 
