@@ -14,7 +14,7 @@ app.listen(8080, function () {
 
 function _Calculate(){
 	let Output : string  = '';
-	const Print = {
+	const Print: {[key:number]: string} = {
     	3: "Music",
     	5: "TI",
     	15: "Musical"
