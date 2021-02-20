@@ -1,5 +1,5 @@
 "use strict";
 module.exports = [
-    'calculate',
+    'api',
     'start'
 ];

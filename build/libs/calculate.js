@@ -1,20 +1,24 @@
 "use strict";
-module.exports = (app) => {
-    app.get('/', function (req, res) {
-        let Output = '';
-        const Print = {
-            3: "Music",
-            5: "TI",
-            15: "Musical"
-        };
-        for (let index = 1; index <= 100; index++) {
-            const Music = index % 3 * -1 + 3;
-            const TI = index % 5 + 5;
-            const Musical = Music * TI;
-            const Result = Print[Musical] || Print[Music] || Print[TI] || index;
-            console.log(Result);
-            Output += Result + "<br>";
-        }
-        res.send(Output);
-    });
+const Print = {
+    3: "Music",
+    5: "TI",
+    15: "Musical"
 };
+const calculate = {
+    execute: function () {
+        let Output = '';
+        [...Array(100)].map((_, index) => {
+            Output += this.validateNumber(index) + "<br>";
+        });
+        return Output;
+    },
+    validateNumber: function (_number) {
+        const Music = _number % 3 * -1 + 3;
+        const TI = _number % 5 + 5;
+        const Musical = Music * TI;
+        const Result = Print[Musical] || Print[Music] || Print[TI] || _number;
+        console.log(Result);
+        return Result;
+    }
+};
+module.exports = calculate;
